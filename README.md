@@ -49,3 +49,17 @@ The APK is signed with the TANGA release key. SHA-256 of the signing certificate
 
 Tanzania is the initial operating market. Food delivery depends on participating
 vendors and riders in the area — the app never claims coverage that does not exist.
+
+## Verified download
+
+Anonymous (no account) `HEAD` request to the release URL returns `HTTP 200`,
+`Content-Length: 70193156`, `Content-Type: application/vnd.android.package-archive`.
+SHA-256 of the APK: `1b8ed613ea07f39eba6cb18063d5c8c5c9c17204c6d217b217908d4cce8d898a`.
+
+## Known limitation of this build (30 October 2026)
+
+The application and its workflows are complete and verified end-to-end. The **live
+backend is still connected to a database that holds no official location reference
+data**, so a new registration can be refused by the location validation step until
+the platform owner completes the database decision described in the acceptance
+report. Customer, vendor and rider work on already-provisioned accounts.
